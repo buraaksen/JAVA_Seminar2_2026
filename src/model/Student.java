@@ -35,11 +35,17 @@ public class Student {
 		//3. setters
 		
 		
-		public void setMatriculaNumber(String matriculaNumber) {
+		public void setMatriculaNumber(String inputMatriculaNumber) {
+			if((inputMatriculaNumber != null) && (!inputMatriculaNumber.isEmpty())&& (inputMatriculaNumber.matches("[]")))
 			this.matriculaNumber = matriculaNumber;
 		}
-		public void setName(String name) {
-			this.name= name;
+		public void setName(String inputName) {
+			if((inputName != null) && (!inputName.isEmpty()) && (inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))) {
+			name= inputName;
+			}
+			else {
+				name = "unkown";
+			}
 		}
 		private void setFaculty(String Fculty) {
 			this.faculty = faculty;
