@@ -36,7 +36,7 @@ public class Student {
 		
 		
 		public void setMatriculaNumber(String inputMatriculaNumber) {
-			if((inputMatriculaNumber != null) && (!inputMatriculaNumber.isEmpty())&& (inputMatriculaNumber.matches("[]")))
+			if((inputMatriculaNumber != null) && (!inputMatriculaNumber.isEmpty())&& (inputMatriculaNumber.matches("[A-Z]{2}[0-9]{6}")))
 			this.matriculaNumber = matriculaNumber;
 		}
 		public void setName(String inputName) {
