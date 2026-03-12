@@ -1,5 +1,7 @@
 package model;
 
+import java.util.EmptyStackException;
+
 public class Student {
 	//1. variables
 		private String matriculaNumber;
@@ -36,8 +38,12 @@ public class Student {
 		
 		
 		public void setMatriculaNumber(String inputMatriculaNumber) {
-			if((inputMatriculaNumber != null) && (!inputMatriculaNumber.isEmpty())&& (inputMatriculaNumber.matches("[A-Z]{2}[0-9]{6}")))
-			this.matriculaNumber = matriculaNumber;
+			if((inputMatriculaNumber != null) && (!inputMatriculaNumber.isEmpty())&& (inputMatriculaNumber.matches("[A-Z]{2}[0-9]{6}"))) {
+				matriculaNumber = inputMatriculaNumber;
+			}else {
+				matriculaNumber = "unkown";
+			}
+			
 		}
 		public void setName(String inputName) {
 			if((inputName != null) && (!inputName.isEmpty()) && (inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))) {
@@ -47,21 +53,59 @@ public class Student {
 				name = "unkown";
 			}
 		}
-		private void setFaculty(String Fculty) {
-			this.faculty = faculty;
+		public void setSurname(String inputSurname) {
+			if ((inputSurname != null)&& (!inputSurname.isEmpty()) &&(inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))){
+			surname = inputSurname;
+			}else {
+				surname = "unkown";
+			}
 		}
-		private void setBirthYear(int birthYear) {
-			this.birthYear = birthYear;
+		
+		private void setFaculty(String inputFaculty) {
+			if (inputFaculty != null) {
+				faculty = inputFaculty;
+			}else {
+				faculty= "unkown";
+			}
 		}
-		private void setCountry(Country country) {
-			this.country = country;
+		//no need to check !null data type bc its primitive 
+		private void setBirthYear(int inputBirthYear) {
+			if((birthYear >= 1950) && (birthYear <= 2020)) {
+				birthYear = inputBirthYear;
+			}else {
+				birthYear = 2008; 
+			}
 		}
-		private void setPassportNumber(String passportNumber) {
-			this.passportNumber = passportNumber;
+		//enums are referenced data type
+		private void setCountry(Country inputCountry) {
+			if (inputCountry != null) {
+				country = inputCountry;
+			}else {
+				country = Country.unkown;
+			}
+			
+		}
+		
+		private void setPassportNumber(String inputPassportNumber) {
+			if((inputPassportNumber != null) && (!inputPassportNumber.isEmpty()) && (inputPassportNumber.matches("[A-Z]{2}[0-9]{6}")) ) {
+				passportNumber = inputPassportNumber;
+			}else {
+				passportNumber = "unkown";
+			}
 		}
 		
 		//4. nor-arg constructor
+		public Student() {
+		}
+		
 		//5. arg-constructor
+		public Student(String inputNUmber, String inputName , String inputSurName ,String inputFaculty ,Country inputCountry , String inputPassportNumber) {
+			setMatriculaNumber(inp);
+			setName(inputName);
+			
+			setSurname(inputSurName);
+			
+		}
 		//6. toString
 		//7. other functions 
 }
