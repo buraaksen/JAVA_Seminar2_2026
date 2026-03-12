@@ -53,7 +53,7 @@ public class Course {
 		setId();
 		setTitle("JAVA");
 		setCreditPoints(2);
-		setProfessor(professor);
+		setProfessor(new Professor());
 	}
 	
 	//arg constructor

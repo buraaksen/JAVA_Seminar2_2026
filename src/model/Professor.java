@@ -55,7 +55,7 @@ public class Professor {
 	//4. no args constructors
 	public Professor() {
 		setId();
-		setName("burak");
+		setName("Burak");
 		setSurname("Sen");
 		setDegree(ProfDegree.bachelor);
 	}
@@ -70,7 +70,7 @@ public class Professor {
 	
 	//6. toString
 	public String toString() {
-		String result = + id + ": " + name + " " + surname + " (" + degree + ")";
+		String result = id + ": " + name + " " + surname + " (" + degree + ")";
 		return result;
 	}
 }
