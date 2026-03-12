@@ -54,7 +54,7 @@ public class Student {
 			}
 		}
 		public void setSurname(String inputSurname) {
-			if ((inputSurname != null)&& (!inputSurname.isEmpty()) &&(inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))){
+			if ((inputSurname != null)&& (!inputSurname.isEmpty()) &&(inputSurname.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))){
 			surname = inputSurname;
 			}else {
 				surname = "unkown";
@@ -100,7 +100,7 @@ public class Student {
 		
 		//5. arg-constructor
 		public Student(String inputNUmber, String inputName , String inputSurName ,String inputFaculty ,Country inputCountry , String inputPassportNumber) {
-			setMatriculaNumber(inp);
+			setMatriculaNumber(inputNUmber);
 			setName(inputName);
 			
 			setSurname(inputSurName);
