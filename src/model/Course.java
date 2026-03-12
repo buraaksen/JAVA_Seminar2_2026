@@ -64,7 +64,7 @@ public class Course {
 		setProfessor(inputProfessor);
 	}
 	public String toString() {
-		String result = "Id: " + id + " " + title + " " + creditPoints + " " + professor;
+		String result = "Course Id: " + id + " " + title + " " + creditPoints + " " + professor;
 		return result;
 	}
 }

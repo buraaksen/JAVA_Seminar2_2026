@@ -70,7 +70,7 @@ public class Professor {
 	
 	//6. toString
 	public String toString() {
-		String result = id + ": " + name + " " + surname + " (" + degree + ")";
+		String result ="Professor id: " +  id + ": " + name + " " + surname + " (" + degree + ")";
 		return result;
 	}
 }
