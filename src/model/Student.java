@@ -99,7 +99,7 @@ public class Student {
 			setMatriculaNumber("AB123456");
 			setName("Aref");
 			setSurname("Hosseini");
-			setFaculty("It");
+			setFaculty("ITF");
 			setBirthYear(2006);
 			setCountry(Country.Spain);
 			setPassportNumber("SP092345");
@@ -117,6 +117,11 @@ public class Student {
 			
 		}
 		//6. toString
-		
+		public String toString() {
+			
+			//Aref Hosseini (AB123456) ITF, 2006 [Spain], SP092345
+			String result = name + " " + surname + " (" + matriculaNumber + ")" + faculty + ", " + birthYear + " [" + country + "], " + passportNumber;
+			return result; 
+		}
 		//7. other functions 
 }
