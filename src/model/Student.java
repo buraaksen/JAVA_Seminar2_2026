@@ -70,7 +70,7 @@ public class Student {
 		}
 		//no need to check !null data type bc its primitive 
 		private void setBirthYear(int inputBirthYear) {
-			if((birthYear >= 1950) && (birthYear <= 2020)) {
+			if((inputBirthYear >= 1950) && (inputBirthYear <= 2020)) {
 				birthYear = inputBirthYear;
 			}else {
 				birthYear = 2008; 
