@@ -24,13 +24,13 @@ public class Professor {
 	}
 	
 	//3. setter
-	public void setId() {
+	private void setId() {
 		
 		id = counter;
 		counter++;
 		
 	}
-	public void setName(String inputName) {
+	private void setName(String inputName) {
 		if((inputName != null) && (!inputName.isEmpty()) && (inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))) {
 			name= inputName;
 			}
@@ -38,14 +38,14 @@ public class Professor {
 				name = "unkown";
 			}
 	}
-	public void setSurname(String inputSurname) {
+	private void setSurname(String inputSurname) {
 		if ((inputSurname != null)&& (!inputSurname.isEmpty()) &&(inputSurname.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))){
 			surname = inputSurname;
 			}else {
 				surname = "unkown";
 			}
 	}
-	public void setDegree(ProfDegree inputDegree) {
+	private void setDegree(ProfDegree inputDegree) {
 		if (inputDegree != null) {
 			degree = inputDegree;
 		}else {
@@ -70,7 +70,7 @@ public class Professor {
 	
 	//6. toString
 	public String toString() {
-		String result = "Id: " + id + " " + name + " " + surname + " " + degree;
+		String result = + id + ": " + name + " " + surname + " (" + degree + ")";
 		return result;
 	}
 }
