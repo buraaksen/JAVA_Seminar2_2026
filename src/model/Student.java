@@ -96,16 +96,27 @@ public class Student {
 		
 		//4. nor-arg constructor
 		public Student() {
+			setMatriculaNumber("AB123456");
+			setName("Aref");
+			setSurname("Hosseini");
+			setFaculty("It");
+			setBirthYear(2006);
+			setCountry(Country.Spain);
+			setPassportNumber("SP092345");
 		}
 		
 		//5. arg-constructor
-		public Student(String inputNUmber, String inputName , String inputSurName ,String inputFaculty ,Country inputCountry , String inputPassportNumber) {
-			setMatriculaNumber(inputNUmber);
+		public Student(String inputNumber, String inputName , String inputSurName ,String inputFaculty ,int inputBirthyear ,Country inputCountry , String inputPassportNumber) {
+			setMatriculaNumber(inputNumber);
 			setName(inputName);
-			
-			setSurname(inputSurName);
+			setSurname(inputSurName); 
+			setFaculty(inputFaculty);
+			setBirthYear(inputBirthyear);
+			setCountry(inputCountry);
+			setPassportNumber(inputPassportNumber);
 			
 		}
 		//6. toString
+		
 		//7. other functions 
 }
