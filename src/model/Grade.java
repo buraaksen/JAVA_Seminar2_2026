@@ -1,6 +1,7 @@
 package model;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 
 public class Grade {
 	private long id;
@@ -64,6 +65,15 @@ public class Grade {
 	}
 	
 	
-	
+	public long averageCalc(ArrayList<Grade> gradesLists) {
+		
+		double total = 0;
+		
+		for(int i = 0; i< gradesLists.size() ; i++) {
+			total += gradesLists.get(i).value;
+		}
+		
+		return (long) (total/gradesLists.size());
+	}
 	
 }

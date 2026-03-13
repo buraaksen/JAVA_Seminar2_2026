@@ -2,11 +2,10 @@ package model;
 
 import java.util.EmptyStackException;
 
-public class Student {
+public class Student extends Person {
 	//1. variables
 		private String matriculaNumber;
-		private String name;
-		private String surname;
+
 		private String faculty;
 		private int birthYear;
 		private Country country;
@@ -16,12 +15,7 @@ public class Student {
 		public String getMatriculaNumber() {
 			return matriculaNumber;
 		}
-		public String getName() {
-			return name;
-		}
-		public String getSurname(){
-			return surname;
-		}
+		
 		public String getFaculty() {
 			return faculty;
 		}
@@ -45,21 +39,7 @@ public class Student {
 			}
 			
 		}
-		public void setName(String inputName) {
-			if((inputName != null) && (!inputName.isEmpty()) && (inputName.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))) {
-			name= inputName;
-			}
-			else {
-				name = "unkown";
-			}
-		}
-		public void setSurname(String inputSurname) {
-			if ((inputSurname != null)&& (!inputSurname.isEmpty()) &&(inputSurname.matches("[A-Z]{1}[a-z]{2,15}([ ]{1}[A-Z]{1}[a-z]{2,15})?"))){
-			surname = inputSurname;
-			}else {
-				surname = "unkown";
-			}
-		}
+		
 		
 		private void setFaculty(String inputFaculty) {
 			if (inputFaculty != null) {
@@ -96,9 +76,9 @@ public class Student {
 		
 		//4. nor-arg constructor
 		public Student() {
+			super();
 			setMatriculaNumber("AB123456");
-			setName("Aref");
-			setSurname("Hosseini");
+			
 			setFaculty("ITF");
 			setBirthYear(2006);
 			setCountry(Country.Spain);
@@ -107,9 +87,9 @@ public class Student {
 		
 		//5. arg-constructor
 		public Student(String inputNumber, String inputName , String inputSurName ,String inputFaculty ,int inputBirthyear ,Country inputCountry , String inputPassportNumber) {
+			super(inputName,inputSurName);
 			setMatriculaNumber(inputNumber);
-			setName(inputName);
-			setSurname(inputSurName); 
+
 			setFaculty(inputFaculty);
 			setBirthYear(inputBirthyear);
 			setCountry(inputCountry);
@@ -117,6 +97,7 @@ public class Student {
 			
 		}
 		//6. toString
+		@Override 
 		public String toString() {
 			
 			//Aref Hosseini (AB123456) ITF, 2006 [Spain], SP092345
@@ -124,4 +105,6 @@ public class Student {
 			return result; 
 		}
 		//7. other functions 
+	
+		
 }
