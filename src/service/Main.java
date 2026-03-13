@@ -96,6 +96,12 @@ public class Main {
 			}
 		}
 		
+		//TODO create filtering func for Students which faculty is ITF
+		//TODO create filtering func for course which leading professor`s id is 1 
+		//TODO create filtering func for grade whic ones are failed (smaller than 4) 
+
+
+		
 		
 		
 		
