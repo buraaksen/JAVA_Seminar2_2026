@@ -41,7 +41,7 @@ public class Main {
 		System.out.println("-------Professors------");
 		Professor professor1 = new Professor();
 		Professor professor2 = new Professor(0, "Taha", "Sen", ProfDegree.bachelor);
-		allProfessors.addAll(Arrays.asList(professor1, professor2));
+		allProfessors.addAll(Arrays.asList(professor1, 	professor2));
 		
 	
 		System.out.println(allProfessors);
@@ -65,7 +65,39 @@ public class Main {
 		
 		System.out.println("-------Persons------");
 		Person person1 = new Person("BUrak", "Sen");
+		
+		
+		System.out.println("----------Professors with master degree----------");
+		filterAllProfessorsWithSpecificDegree(ProfDegree.master);
+		System.out.println("----------Professors with phd degree----------");
+		filterAllProfessorsWithSpecificDegree(ProfDegree.phd);
+		
+		System.out.println("----------Students birtyear larger than 2005----------");
+		filterAllStudentsBirthYear(2010);
+		
 
+		
+		
 	}
+		
+		public static void filterAllProfessorsWithSpecificDegree(ProfDegree degree) {
+		for (Professor tempS : allProfessors) {
+			if(tempS.getDegree().equals(degree)) {
+				System.out.println(tempS);
+				}
+			}
+		}
+		
+		public static void filterAllStudentsBirthYear(int birthyear ) {
+			for(Student temps : allStudents) {
+				if(temps.getBirthYear() >= birthyear) {
+					System.out.println(temps);
+				}
+			}
+		}
+		
+		
+		
+		
 
 }

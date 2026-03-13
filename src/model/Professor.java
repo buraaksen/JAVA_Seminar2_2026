@@ -36,7 +36,7 @@ public class Professor extends Person {
 	public Professor() {
 		super();
 		setId();
-		setDegree(ProfDegree.bachelor);
+		setDegree(ProfDegree.phd);
 	}
 	//5. args constructors 
 	public Professor(long inputId, String inputName, String inputSurname, ProfDegree inputDegree  ) {
