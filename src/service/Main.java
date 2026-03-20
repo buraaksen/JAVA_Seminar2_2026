@@ -1,10 +1,7 @@
 package service;
 
-import java.lang.invoke.CallSite;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-
 import model.Country;
 import model.Course;
 import model.Grade;
@@ -31,6 +28,12 @@ public class Main {
 		allStudents.add(student2);
 		allStudents.add(student3);
 		allStudents.add(student4);
+		
+		for (int i= 0; i<allStudents.size(); i++) {
+			if(allStudents.get(i).getCountry().equals(Country.Latvia)) {
+				System.out.println(allStudents.get(i));
+			}
+		}
 		
 		for (int i= 0; i<allStudents.size(); i++) {
 			if(allStudents.get(i).getCountry().equals(Country.Latvia)) {
